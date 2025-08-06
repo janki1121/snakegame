@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snake Game</title>
+        <style>
+            body {
+                background-image: url("/Users/jankipatel/pinksnake.png");
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            canvas {
+                display: block;
+                margin: 0 auto;
+    
+                margin-bottom: 20px;
+                border: 1px solid black;
+                background-color: #FFCCCC;
+            }
+
+            h1 {
+                color: black;
+                font-family: cursive;
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body onload="startGame()">
+        <h1>Snake Game</h1>
+        <canvas id="canvas"></canvas>
+        <button id="start-button">Start Game</button>
+        <script src="snake.js"></script>
+        <script>
+            // Set canvas dimensions based on screen size
+            var canvas = document.getElementById("canvas");
+            canvas.width = window.innerWidth * 0.8;
+            canvas.height = window.innerHeight * 0.8;
+            
+            // Call initGame to start the game
+            initGame();
+        </script src="snake.js">
+        <script>
+            window.onload = function () {
+                const canvas = document.getElementById("canvas");
+                canvas.width = window.innerWidth * 0.8;
+                canvas.height = window.innerHeight * 0.8;
+
+                document.getElementById("start-button").addEventListener("click", function () {
+                    initGame();
+
+
+                });
+            };
+        </script>
+    </body>
+</html>
